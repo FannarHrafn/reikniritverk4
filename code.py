@@ -20,13 +20,12 @@ def fall(L):
 L = [0,0,7,1,8,2,5,10,8,9,3,6,1]
 print fall(L)
 
+
 linearlist = [8,5,3,7,1,9,2,6]
 
-def linearsearch(list,Z):
-    counter = 0
-    for x in list:
-        if x == Z:
-            return counter
-        else:
-            counter += 1
+def linearsearch(list,search):
+    for x in range(len(list)):
+        if list[x] == search:
+            return x
+
 print linearsearch(linearlist,7)
