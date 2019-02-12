@@ -8,21 +8,25 @@ def fall(L):
 
     summa = 0
     for i in range(len(countL)):
-        print countL
-        print countL[i]
         summa += countL[i]
-        print summa
         countL[i] = summa
-        print countL
 
     for i in range(len(L)):
-        print L[i]
-        print countL[L[i]]
         resutlL[countL[L[i]]-1] = L[i]
-        print resutlL
         countL[L[i]] -= 1
 
     return resutlL
 
 L = [0,0,7,1,8,2,5,10,8,9,3,6,1]
 print fall(L)
+
+linearlist = [8,5,3,7,1,9,2,6]
+
+def linearsearch(list,Z):
+    counter = 0
+    for x in list:
+        if x == Z:
+            return counter
+        else:
+            counter += 1
+print linearsearch(linearlist,7)
