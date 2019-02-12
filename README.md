@@ -11,4 +11,4 @@ a)
 
 b) Þetta er kallað counting sort
 
-c) flækjustig er 'O[n]'
+c) flækjustig er 'O[n]' því þó það hafi þrjár lykkjur þá eru engar nested lykkjur
