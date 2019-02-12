@@ -9,4 +9,6 @@ a)
 
 í þriðju lykkju þá nýtum við þessi sæti sem við fundum í annarri lykkjunni til að raða tölunum í rétta röð og í rétta fjölda í result list
 
-b)
+b) Þetta er kallað counting sort
+
+c) flækjustig er 'O[n]'
