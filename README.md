@@ -15,3 +15,6 @@ c) flækjustig er 'O[n]' því þó það hafi þrjár lykkjur þá eru engar ne
 
 ## 2
 í code.py fall: linearsearch
+
+## 3
+í code.py fall: binarysearch
