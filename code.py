@@ -19,7 +19,6 @@ def fall(L):
     return resutlL
 
 L = [0,0,7,1,8,2,5,10,8,9,3,6,1]
-print fall(L)
 
 
 linearlist = [8,5,3,7,1,9,2,6]
@@ -28,11 +27,12 @@ def linearsearch(list,search):
     for x in range(len(list)):
         if list[x] == search:
             return x
+    return -1
 
-print linearsearch(linearlist,7)
+print linearsearch(linearlist,10)
 
 
-binarylist = [1,2,3,5,6,7,8,9]
+
 """
 print "binary"
 def binarysearch(listi,target):
@@ -48,11 +48,11 @@ def binarysearch(listi,target):
         return binarysearch(listi[middle-1:],target)
 """
 #print(binarysearch(binarylist,7))
+binarylist = [1,2,3,5,6,7,8,9]
 def binarysearch(listi,l,h,target):
     if l<h:
         middle = (l + (h-1))/2
-        print listi
-        print middle
+        #middle = (l+h)//2
 
         if listi[middle] == target:
             return middle
@@ -62,8 +62,8 @@ def binarysearch(listi,l,h,target):
             return binarysearch(listi,middle+1,h,target)
     else:
         return -1
-
-print(binarysearch(binarylist,0,len(binarylist),7))
+print "binary"
+print(binarysearch(binarylist,0,len(binarylist),4))
 
 
 print "placing"
@@ -71,7 +71,7 @@ emptylist = []
 placinglist= [2,3,3,5,6,7,9,10]
 def rightplace(Listi,stak):
     if len(Listi) == 0:
-        Listi.insert(0,stak)
+        Listi.append(stak)
         return True
     else:
         for x in range(0,len(Listi)):
@@ -84,7 +84,7 @@ def rightplace(Listi,stak):
             elif Listi[x] <= stak and Listi[x+1] >= stak:
                 Listi.insert(x+1,stak)
                 return True
-rightplace(placinglist,4)
+rightplace(placinglist,5)
 print placinglist
 rightplace(emptylist,1)
 print emptylist
@@ -98,7 +98,7 @@ print emptylist
 
 
 #geyma tetta til seinna
-'''
+
 class Node:
     def __init__(self,v):
         self.value = v
@@ -120,8 +120,21 @@ class Node:
             else:
                 self.right = Node(d)
                 return True
+    def find(self,x):
+        if self.value == x:
+            return True
+        elif self.value > x:
+            if self.left:
+                return self.left.find(x)
+            else:
+                return False
+        else:
+            if self.right:
+                return self.right.find(x)
+            else:
+                return False
 class Tree:
-    def __index__(self):
+    def __init__(self):
         self.root = None
 
     def insert(self,d):
@@ -130,9 +143,16 @@ class Tree:
         else:
             self.root = Node(d)
             return True
+    def find(self,x):
+        if self.root:
+            return self.root.find(x)
+        else:
+            return False
 t = Tree()
+print "Tree"
 print (t.insert(6))
 print (t.insert(2))
 print (t.insert(3))
 print (t.insert(7))
-'''
+print "result"
+print (t.find(2))
