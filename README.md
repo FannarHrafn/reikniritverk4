@@ -18,3 +18,7 @@ c) flækjustig er 'O[n]' því þó það hafi þrjár lykkjur þá eru engar ne
 
 ## 3
 í code.py fall: binarysearch
+
+## 4
+
+Liður 2 er bara ein lykkja og er þá O(N) Liður 3 er divide and conquer svo það er O(Log(n))
