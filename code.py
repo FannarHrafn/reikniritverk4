@@ -66,12 +66,28 @@ def binarysearch(listi,l,h,target):
 print(binarysearch(binarylist,0,len(binarylist),7))
 
 
-
-
-
-
-
-
+print "placing"
+emptylist = []
+placinglist= [2,3,3,5,6,7,9,10]
+def rightplace(Listi,stak):
+    if len(Listi) == 0:
+        Listi.insert(0,stak)
+        return True
+    else:
+        for x in range(0,len(Listi)):
+            if x == len(Listi)-1 and Listi[x] <= stak:
+                Listi.insert(x+1,stak)
+                return True
+            elif x == 0 and Listi[x] >= stak:
+                Listi.insert(x,stak)
+                return True
+            elif Listi[x] <= stak and Listi[x+1] >= stak:
+                Listi.insert(x+1,stak)
+                return True
+rightplace(placinglist,4)
+print placinglist
+rightplace(emptylist,1)
+print emptylist
 
 
 
